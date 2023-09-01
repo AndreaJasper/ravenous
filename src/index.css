@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@1,300&family=Open+Sans:wght@400;800&family=Roboto:wght@300;400&display=swap');
+
+:root {
+  --main-color: #CBA354;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  margin: 0!important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+header {
+  background-color: var(--main-color);
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 3rem;
+  color: #fff;
+  padding: 20px 0;
+}
+
+#business h2 {
+  font-weight: 800;
+}
+
+.category {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
