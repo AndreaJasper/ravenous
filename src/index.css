@@ -11,10 +11,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-p {
-  margin: 0!important;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -31,23 +27,11 @@ header {
   padding: 20px 0;
 }
 
-.business-name {
-  font-weight: 800;
-}
-
-.business-reviews h3, .rating {
-  color: var(--main-color);
-}
-
-.rating {
-  font-weight: bold;
-}
-
-.business-reviews h3, .business-reviews p {
-  margin: 0;
-}
-
 /* BOOTSTRAP OVERRIDES */
+p {
+  margin: 0!important;
+}
+
 .card {
   border: none !important;
 }

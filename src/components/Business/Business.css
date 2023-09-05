@@ -1,0 +1,15 @@
+.business-name {
+    font-weight: 800;
+  }
+  
+  .business-reviews h3, .rating {
+    color: var(--main-color);
+  }
+  
+  .rating {
+    font-weight: bold;
+  }
+  
+  .business-reviews h3, .business-reviews p {
+    margin: 0;
+  }

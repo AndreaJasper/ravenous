@@ -1,23 +1,19 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Business from './components/Business';
 import BusinessList from './components/BusinessList';
-import SearchBar from './components/SearchBar';
+import SearchBar from './components/SearchBar/SearchBar';
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
         <header>
-          <div className="container-fluid text-center">
-            <h1 className="logo">ravenous</h1>
-          </div>
+            <h1 className="logo text-center">ravenous</h1>
         </header>
         <main>
           <SearchBar />
           <BusinessList />
-          {/* <Business /> */}
         </main>
       </div>
     );
