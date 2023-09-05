@@ -1,0 +1,24 @@
+.search-bar {
+    padding: 50px 0 100px 0;
+}
+.sort-by {
+    padding-top: 50px;
+}
+
+.sort-by li {
+    list-style: none;
+    cursor: pointer;
+    border-bottom: 1px solid #fff;
+    padding: 0 2.58rem .33rem 2.58rem;
+    display: inline;
+}
+
+/* BOOTSTRAP OVERRIDES */
+.search-btn {
+    background-color: var(--main-color) !important;
+    border: none !important;
+    border-radius: 3px !important;
+    padding: 10px 50px;
+    margin-top: 50px !important;
+    font-weight: bold;
+}
