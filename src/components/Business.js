@@ -1,35 +1,47 @@
-import { isCompositeComponentWithType } from "react-dom/test-utils";
-import { Card } from 'react-bootstrap';
+import React from 'react';
+import { Card, Col } from 'react-bootstrap';
 
-const Business = () => {
+const business = {
+    imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
+    name: 'MarginOtto Pizzeria',
+    address: '1010 Paddington Way',
+    city: 'Flavortown',
+    state: 'NY',
+    zipCode: '10101',
+    category: 'Italian',
+    rating: 4.5,
+    reviewCount: 90
+}
 
-    return (
-        <div id="business" className="container">
-            <h1>Business</h1>
-            {/* <Card className="card">
-                <Card.Img src={business.imageSrc} alt={business.name} />
-                <Card.Body>
-                    <Card.Title>
-                        {business.name}
-                    </Card.Title>
-                    <Card.Text>
-                        <div className="row">
-                            <div className="col-sm-12 col-md-6">
-                                <p>{business.address}</p>
-                                <p>{business.city}</p>
-                                <p>{business.state}{business.zipcode}</p>
+class Business extends React.Component {
+    render() {
+        return (
+            <Col sm={12} md={3}>
+                <Card>
+                    <Card.Img variant="top" src={business.imageSrc} />
+                    <Card.Body>
+                        <h4 className='business-name'>{business.name}</h4>
+                        <div className='row'>
+                            <div className='col-sm-12 col-md-6'>
+                                <div className='business-information'>
+                                    <p>{business.address}</p>
+                                    <p>{business.city}</p>
+                                    <p>{business.state} {business.zip}</p>
+                                </div>
                             </div>
-                            <div className="col-sm-12 col-md-6 sm-text-end">
-                                <p className="category">{business.category}</p>
-                                <p>{business.rating}</p>
-                                <p>{business.review_count}</p>
+                            <div className='col-sm-12 col-md-6 text-md-end'>
+                                <div className='business-reviews'>
+                                    <h3 className='text-uppercase category'>{business.category}</h3>
+                                    <p className='rating'>{business.rating} stars</p>
+                                    <p>{business.reviewCount} reviews</p>
+                                </div>
                             </div>
                         </div>
-                    </Card.Text>
-                </Card.Body>
-            </Card>     */}
-        </div>
-    );
+                    </Card.Body>
+                </Card>
+            </Col>
+        );
+    }
 }
 
 export default Business;
