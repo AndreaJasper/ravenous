@@ -1,4 +1,15 @@
-# Getting Started with Create React App
+# Ravenous
+![](https://github.com/AndreaJasper/ravenous/blob/main/screenshot4.png)
+
+## About
+This is a React website that allows users to search for local restaurants bases on location and keywords.
+
+## Stack
+- HTML
+- CSS
+- JavaScript
+- React
+- Yelp API
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

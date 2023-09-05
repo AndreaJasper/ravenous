@@ -1,7 +1,7 @@
 import React from 'react';
+import './Business.css';
 import Row from 'react-bootstrap/Row';
 import { Card, Col } from 'react-bootstrap';
-import './Business.css';
 
 const business = {
     imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
@@ -32,7 +32,7 @@ class Business extends React.Component {
                                 </div>
                             </Col>
                             <Col sm={12} md={6}>
-                                <div className='business-reviews'>
+                                <div className='business-reviews text-md-end'>
                                     <h3 className='text-uppercase category'>{business.category}</h3>
                                     <p className='rating'>{business.rating} stars</p>
                                     <p>{business.reviewCount} reviews</p>

@@ -1,0 +1,11 @@
+.business-list {
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+/* MEDIA STYLES */
+@media only screen and (max-width: 560px) {
+    .business-list {
+        padding: 30px;
+    }
+}

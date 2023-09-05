@@ -25,6 +25,7 @@ header {
   font-size: 3rem;
   color: #fff;
   padding: 20px 0;
+  margin-bottom: 0;
 }
 
 /* BOOTSTRAP OVERRIDES */
