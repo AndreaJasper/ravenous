@@ -20,6 +20,10 @@
     display: inline;
 }
 
+.sort-by li:hover, .sort-by li:active {
+    color: var(--main-color);
+}
+
 /* BOOTSTRAP OVERRIDES */
 .search-btn {
     background-color: var(--main-color) !important;

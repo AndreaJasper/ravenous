@@ -1,5 +1,5 @@
-import React from 'react';
-import './Search.css';
+import React, { useState } from 'react';
+import styles from './Search.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
@@ -14,11 +14,47 @@ const sortByOptions = {
 
 
 
-const SearchBar = () => {
+const SearchBar = ({ searchYelp }) => {
+    const [term, setTerm] = useState("null");
+    const [location, setLocation] = useState("null");
+    const [sortBy, setSortBy] = useState("best_match");
+
+    const getSortByClass = (sortByOption) => {
+        if (sortBy === sortByOption) {
+            return styles.active;
+        }
+        return "";
+    };
+
+    const handleSortByChange = (sortByOption) => {
+        setSortBy(sortByOption);
+    };
+
+    const handleTermChange = (event) => {
+        setTerm(event.target.value);
+    };
+
+    const handleLocationChange = (event) => {
+        setLocation(event.target.value);
+    };
+
+    const handleSearch = (event) => {
+        event.preventDefault();
+        searchYelp(term, location, sortBy);
+    };
+
     const renderSortByOptions = () => {
       return Object.keys(sortByOptions).map((sortByOption) => {
         let sortByOptionValue = sortByOptions[sortByOption];
-        return <li key={sortByOptionValue}>{sortByOption}</li>;
+        return <li 
+            className={getSortByClass(sortByOptionValue)}
+            onClick={() => {
+                handleSortByChange(sortByOptionValue);
+            }}
+            key={sortByOptionValue}
+            >
+                {sortByOption}
+            </li>;
       });
     };
 
@@ -35,16 +71,12 @@ const SearchBar = () => {
                     <Row className="my-3">
                         <Col sm={12} md={6}>
                             <Form.Group controlId="business" className='business-search'>
-                                <FloatingLabel label="Search Businesses">
-                                    <Form.Control type="text" placeholder="Search Businesses" />
-                                </FloatingLabel>
+                                <Form.Control type="text" placeholder="Search Businesses" />
                             </Form.Group>
                         </Col>
                         <Col sm={12} md={6}>
                             <Form.Group controlId="location">
-                                <FloatingLabel label="Where?">
-                                    <Form.Control type="text" placeholder="Where?" />
-                                </FloatingLabel>
+                                <Form.Control type="text" placeholder="Where?" />
                             </Form.Group>
                         </Col>
                     </Row>
