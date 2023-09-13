@@ -8,7 +8,7 @@ const BusinessList = ({ businesses }) => {
     return (
         <Container className='business-list'>
             <Row>
-                <h1>TESTING</h1>
+                <h1>Search Results</h1>
                 {businesses.map((business) => {
                     return <Business business={business} key={business.name} />;
                 })}
