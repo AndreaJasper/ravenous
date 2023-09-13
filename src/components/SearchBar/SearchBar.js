@@ -3,7 +3,7 @@ import styles from './Search.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
-import { Col, FloatingLabel } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 
 const sortByOptions = {
@@ -44,19 +44,21 @@ const SearchBar = ({ searchYelp }) => {
     };
 
     const renderSortByOptions = () => {
-      return Object.keys(sortByOptions).map((sortByOption) => {
+        return Object.keys(sortByOptions).map((sortByOption) => {
         let sortByOptionValue = sortByOptions[sortByOption];
-        return <li 
+        return (
+        <li
             className={getSortByClass(sortByOptionValue)}
-            onClick={() => {
-                handleSortByChange(sortByOptionValue);
-            }}
             key={sortByOptionValue}
-            >
-                {sortByOption}
-            </li>;
-      });
-    };
+            onClick={() => {
+            handleSortByChange(sortByOptionValue);
+            }}
+        >
+            {sortByOption}
+        </li>
+        );
+    });
+};
 
     return (
         <div className="search-area">
@@ -67,16 +69,18 @@ const SearchBar = ({ searchYelp }) => {
                     </ul>
                 </div>
                 <hr></hr>
-                <Form className="search-bar ">
+                <Form className="search-bar " onSubmit={handleSearch}>
                     <Row className="my-3">
                         <Col sm={12} md={6}>
                             <Form.Group controlId="business" className='business-search'>
-                                <Form.Control type="text" placeholder="Search Businesses" />
+                                <Form.Control type="text" placeholder="Search Businesses" 
+                                onChange={handleTermChange}/>
                             </Form.Group>
                         </Col>
                         <Col sm={12} md={6}>
                             <Form.Group controlId="location">
-                                <Form.Control type="text" placeholder="Where?" />
+                                <Form.Control type="text" placeholder="Where?" 
+                                onChange={handleLocationChange}/>
                             </Form.Group>
                         </Col>
                     </Row>

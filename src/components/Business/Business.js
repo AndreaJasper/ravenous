@@ -15,14 +15,14 @@ const Business = ({ business }) => {
                             <div className='business-information'>
                                 <p>{business.address}</p>
                                 <p>{business.city}</p>
-                                <p>{business.state} {business.zip}</p>
+                                <p>{`${business.state} ${business.zip}`}</p>
                             </div>
                         </Col>
                         <Col sm={12} md={6}>
                             <div className='business-reviews text-md-end'>
                                 <h3 className='text-uppercase category'>{business.category}</h3>
-                                <p className='rating'>{business.rating} stars</p>
-                                <p>{business.reviewCount} reviews</p>
+                                <p className='rating'>{`${business.rating} stars`}</p>
+                                <p>{`${business.reviewCount} reviews`}</p>
                             </div>
                         </Col>
                     </Row>
