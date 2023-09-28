@@ -2,7 +2,7 @@
 ![](https://github.com/AndreaJasper/ravenous/blob/main/screenshot4.png)
 
 ## About
-This is a React website that allows users to search for local restaurants bases on location and keywords.
+This is a React website that allows users to search for local restaurants based on location and keywords.
 
 ## Stack
 - HTML
